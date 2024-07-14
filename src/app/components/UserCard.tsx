@@ -18,7 +18,7 @@ export default function UserCard({ user, pagetype }: Props) {
     //console.log(user)
 
     const signout = ()=>{
-        signOut({callbackUrl:'http://localhost:3000/dashboard', redirect:true});
+        signOut({callbackUrl:'http://localhost:3000/', redirect:true});
     }
 
     const greeting = user?.name ? (
@@ -50,7 +50,7 @@ export default function UserCard({ user, pagetype }: Props) {
             {/* {emailDisplay} */}
             {userImage}
             <p className="text-2xl text-center">{pagetype} Page!</p>
-            <button onClick={signout} className="py-1 px-4 bg-black text-white rounded-lg w-[250px] h-[50px] mx-auto block" >Sigout</button>
+            {/* <button onClick={signout} className="py-1 px-4 bg-black text-white rounded-lg w-[250px] h-[50px] mx-auto block" >Sigout</button> */}
         </section>
     )
 }
